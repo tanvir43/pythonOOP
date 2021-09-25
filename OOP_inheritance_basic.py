@@ -17,6 +17,9 @@ class Bird:
     def can_do(cls):
         print("Most of bird can fly")
 
+    def whoIsThis(self):
+        print("A bird")
+
 
 class Parrot(Bird):
     def __init__(self, name, age, color):
@@ -29,9 +32,12 @@ class Parrot(Bird):
     def can_fly(self, running_type):
         print(self.name + " " + "can run" " " + running_type)
 
+    def whoIsThis(self):
+        print("a Parrot")
+
 
 #  Intstantiating objects(specific instances)
-Bird.can_do()
+Bird.can_do()  # accessing the class method without instantiating new instance of Bird class
 brd = Bird("2","2")
 print(brd.__class__.species)  # accessing the class attributes with __class__
 
