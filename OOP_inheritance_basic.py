@@ -13,6 +13,7 @@ class Bird:
         self.wings = no_of_wings
 
     #  class method
+    @classmethod  # to make an instance method to class method
     def can_do(cls):
         print("Most of bird can fly")
 
@@ -30,9 +31,9 @@ class Parrot(Bird):
 
 
 #  Intstantiating objects(specific instances)
+Bird.can_do()
 brd = Bird("2","2")
 print(brd.__class__.species)  # accessing the class attributes with __class__
-brd.can_do()  # accessing the class method with __class__
 
 parry = Parrot("perry", "2", "green")
 print("Name of the bird is {}".format(parry.name))
